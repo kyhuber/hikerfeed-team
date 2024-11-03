@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background -->
+  <rect width="64" height="64" fill="#2c3e50" rx="8"/>
+  
+  <!-- Mountains -->
+  <path d="M8 48 L24 24 L40 48 Z" fill="#95a5a6"/>
+  <path d="M24 48 L40 16 L56 48 Z" fill="#7f8c8d"/>
+  
+  <!-- Sun -->
+  <circle cx="44" cy="20" r="8" fill="#f1c40f"/>
+  
+  <!-- Stylized 'H' for HikerFeed -->
+  <path d="M16 24 L16 40 M16 32 L24 32 M24 24 L24 40" 
+        stroke="#ecf0f1" 
+        stroke-width="4" 
+        fill="none"
+        stroke-linecap="round"/>
+</svg>
