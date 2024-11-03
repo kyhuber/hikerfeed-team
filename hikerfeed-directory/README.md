@@ -1,39 +1,46 @@
-# hikerfeed-directory
+# HikerFeed Team Directory
 
-This template should help get you started developing with Vue 3 in Vite.
+Welcome to the **HikerFeed Team Directory**! 🎉 This Vue-powered app showcases our growing team of engineers, all working together (remotely) to make outdoor adventures more accessible and inspiring for everyone.
 
-## Recommended IDE Setup
+### What This Does
+The HikerFeed Team Directory is a simple app that displays profiles for each team member. It's meant to be a quick reference where we can:
+- Get to know who's who on the team (no more guessing who that face is on Google Meet calls!),
+- See each other's skills and what we're working on,
+- Have a bit of fun with "fun facts" and photos that show off our best sides.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+The app includes each team member's:
+- **Name**
+- **Role**
+- **Location** (we’re all over the place)
+- **Timezone** (because let’s face it, scheduling is tough)
+- **Skills**
+- **Why HikerFeed?** (a short reason you’re here)
+- **Fun Fact** (bonus points for creativity)
+- **Best Times to Meet** (optional, but super helpful)
+- **Preferred Communication Method** (for the introverts among us)
+- **Goals at HikerFeed** (optional – think of it as a wish list for what you’d like to achieve here)
+- **Photos** (optional – feel free to add one or more!)
 
-## Type Support for `.vue` Imports in TS
+### How to Add Yourself
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+1. **Locate the Team Data File**
+   - Head over to `src/data/teamData.ts`. This file holds all the profiles for our team. It’s just a simple array of objects, where each object represents a team member.
 
-## Customize configuration
+2. **Add Your Profile**
+   - Add a new object to the array for yourself. You can copy the format below and paste it at the bottom of the array. Please don’t delete anyone else’s profile…unless you have a good reason and a solid alibi.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+   ```typescript
+   {
+     name: "Your Name Here",
+     role: "Your Role (e.g., Backend Engineer, Full-Stack Magician, etc.)",
+     location: "Your City, Country (optional but nice to know)",
+     timezone: "Your Timezone (e.g., PST, GMT+1, etc.)",
+     skills: ["Skill 1", "Skill 2", "Skill 3"],  // Keep this reasonable, we all know you're amazing!
+     whyHikerFeed: "Why you're here and why you think HikerFeed is awesome",
+     funFact: "A fun fact about yourself. If it involves a bear encounter, +10 points.",
+     avatar: "https://ui-avatars.com/api/?name=Your+Name",  // You can use the avatar generator link or add your own URL here.
+     bestTimesToMeet: "Your availability (e.g., Weekdays 10am - 2pm PST)",
+     communicationPreference: "Preferred way to communicate (Slack, Google Meet, Signal via Morse Code, etc.)",
+     goals: "What you'd like to accomplish here at HikerFeed",
+     photos: ["https://your-photo-link.com/photo1.jpg", "https://your-photo-link.com/photo2.jpg"]  // Optional, can add multiple if you like.
+   }
