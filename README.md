@@ -1,25 +1,25 @@
 # HikerFeed Team Directory
 
-Welcome to the **HikerFeed Team Directory**! 🎉 This Vue-powered app showcases our growing team of engineers, all working together (remotely) to make outdoor adventures more accessible and inspiring for everyone.
+Welcome to the **HikerFeed Team Directory**! 🎉
 
 ### What This Does
-The HikerFeed Team Directory is a simple app that displays profiles for each team member. It's meant to be a quick reference where we can:
-- Get to know who's who on the team (no more guessing who that face is on Google Meet calls!),
+The HikerFeed Team Directory is displays profiles for each team member. It's meant to be a quick reference where we can:
+- Get to know who's who on the team,
 - See each other's skills and what we're working on,
-- Have a bit of fun with "fun facts" and photos that show off our best sides.
+- Have a bit of fun and photos that show off our best sides.
 
 The app includes each team member's:
 - **Name**
 - **Role**
 - **Location** (we’re all over the place)
-- **Timezone** (because let’s face it, scheduling is tough)
+- **Timezone** (scheduling is tough)
 - **Skills**
 - **Why HikerFeed?** (a short reason you’re here)
 - **Fun Fact** (bonus points for creativity)
 - **Best Times to Meet** (optional, but super helpful)
 - **Preferred Communication Method** (for the introverts among us)
 - **Goals at HikerFeed** (optional – think of it as a wish list for what you’d like to achieve here)
-- **Photos** (optional – feel free to add one or more!)
+- **Photos** (optional – feel free to add one or more)
 
 ### How to Add Yourself
 
@@ -27,7 +27,7 @@ The app includes each team member's:
    - Head over to `src/data/teamData.ts`. This file holds all the profiles for our team. It’s just a simple array of objects, where each object represents a team member.
 
 2. **Add Your Profile**
-   - Add a new object to the array for yourself. You can copy the format below and paste it at the bottom of the array. Please don’t delete anyone else’s profile…unless you have a good reason and a solid alibi.
+   - Add a new object to the array for yourself. You can copy the format below and paste it at the bottom of the array. Please don’t delete anyone else’s profile...unless you have a good reason and a solid alibi.
 
    ```typescript
    {
