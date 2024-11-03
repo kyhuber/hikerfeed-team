@@ -1,11 +1,13 @@
-import { fileURLToPath, URL } from 'node:url'
-
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import path from 'path'
 
-// https://vite.dev/config/
 export default defineConfig({
-    base: '/hikerfeed-team/',
-    plugins: [vue()]
+  base: '/hikerfeed-directory/',
+  plugins: [vue()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')
+    }
+  }
 })
-
