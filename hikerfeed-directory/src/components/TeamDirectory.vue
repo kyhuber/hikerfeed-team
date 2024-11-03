@@ -9,14 +9,14 @@
             v-model="searchTerm" 
             placeholder="Search team members..."
             class="search-input"
-          >
+          />
         </div>
       </div>
   
       <div class="team-grid">
         <div v-for="member in filteredMembers" :key="member.name" class="team-card">
           <div class="card-header">
-            <img :src="member.avatar" :alt="member.name" class="avatar">
+            <img :src="member.avatar" :alt="member.name" class="avatar" />
             <div class="header-text">
               <h3>{{ member.name }}</h3>
               <p class="role">{{ member.role }}</p>
@@ -40,6 +40,13 @@
               <h4>Fun Fact</h4>
               <p>{{ member.funFact }}</p>
             </div>
+            <!-- Photos section for each member -->
+            <div v-if="member.photos" class="photos">
+              <h4>Photos:</h4>
+              <div v-for="photo in member.photos" :key="photo" class="photo-container">
+                <img :src="photo" alt="Team Member Photo" class="team-photo" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -48,6 +55,7 @@
   
   <script setup lang="ts">
   import { ref, computed } from 'vue'
+  import teamData from '../data/teamData'
   
   interface TeamMember {
     name: string
@@ -58,32 +66,15 @@
     whyHikerFeed: string
     funFact: string
     avatar: string
+    bestTimesToMeet?: string
+    communicationPreference?: string
+    goals?: string
+    photos?: string[] // Added this field to the interface
   }
   
   const searchTerm = ref('')
   
-  const teamMembers = ref<TeamMember[]>([
-    {
-      name: "Sarah Chen",
-      role: "Frontend Engineer",
-      location: "Seattle, WA",
-      timezone: "PST",
-      skills: ["Vue", "TypeScript", "UI/UX"],
-      whyHikerFeed: "Passionate about making outdoor activities more accessible",
-      funFact: "Once hiked all of Washington's volcanic peaks in one summer",
-      avatar: "https://ui-avatars.com/api/?name=Sarah+Chen"
-    },
-    {
-      name: "Alex Rodriguez",
-      role: "Backend Engineer",
-      location: "Austin, TX",
-      timezone: "CST",
-      skills: ["Node.js", "PostgreSQL", "AWS"],
-      whyHikerFeed: "Looking to gain startup experience",
-      funFact: "Maintains a popular hiking trail app as a side project",
-      avatar: "https://ui-avatars.com/api/?name=Alex+Rodriguez"
-    }
-  ])
+  const teamMembers = ref<TeamMember[]>(teamData)
   
   const filteredMembers = computed(() => {
     const search = searchTerm.value.toLowerCase()
@@ -102,6 +93,7 @@
     padding: 2rem;
   }
   
+  /* Style adjustments for clarity */
   .header {
     margin-bottom: 2rem;
   }
@@ -194,4 +186,20 @@
     margin: 0;
     font-size: 0.875rem;
   }
+  
+  .photos {
+    margin-top: 1rem;
+  }
+  
+  .photo-container {
+    display: inline-block;
+    margin-right: 8px;
+  }
+  
+  .team-photo {
+    width: 64px;
+    height: 64px;
+    border-radius: 4px;
+  }
   </style>
+  
